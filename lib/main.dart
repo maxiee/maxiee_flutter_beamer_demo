@@ -17,6 +17,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routeInformationParser: BeamerParser(),
       routerDelegate: _routerDelegate,
+      backButtonDispatcher: BeamerBackButtonDispatcher(
+        delegate: _routerDelegate,
+      ),
     );
   }
 }
